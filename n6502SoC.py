@@ -1,9 +1,6 @@
-# from migen import *
+from migen import *
 # from migen.fhdl import verilog
-# from migen.build.platforms import mercury as my_plat # Your platform here
-
-from migen.fhdl.std import *
-from mibuild.platforms import mercury as my_plat
+from migen.build.platforms import mercury as my_plat # Your platform here
 
 import n6502fpga.interconnect.n6502 as bus65
 from n6502fpga.cores import Arlet

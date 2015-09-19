@@ -1,6 +1,4 @@
-# from migen import *
-
-from migen.fhdl.std import *
+from migen import *
 
 import n6502fpga.interconnect.n6502 as bus65
 

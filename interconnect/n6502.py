@@ -1,7 +1,5 @@
-# from migen import *
-# from migen.fhdl import verilog
-from migen.fhdl.std import *
-from migen.genlib.record import *
+from migen import *
+from migen.fhdl import verilog
 
 from operator import and_
 
@@ -105,11 +103,9 @@ class SysCon(Module):
                     self.comb += [gate[0].eq(0)]
             else:
                 if default_state:
-                    # self.comb += [gate[0].eq(reduce(and_, srcs))]
-                    self.comb += [gate[0].eq(~optree("&", srcs))]
+                    self.comb += [gate[0].eq(reduce(and_, srcs))]
                 else:
-                    # self.comb += [gate[0].eq(~reduce(and_, srcs))]
-                    self.comb += [gate[0].eq(~optree("&", srcs))]
+                    self.comb += [gate[0].eq(~reduce(and_, srcs))]
 
 
 

@@ -1,6 +1,5 @@
-# from migen import *
+from migen import *
 
-from migen.fhdl.std import *
 import n6502fpga.interconnect.n6502 as bus65
 
 class Core(Module):
